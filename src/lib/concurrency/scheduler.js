@@ -1,7 +1,6 @@
 import Scheduler from './external/scheduler/scheduler';
-import { deferred } from './deferred.js';
 
-const MICROTASK_PROMISE = deferred();
+const MICROTASK_PROMISE = Promise.resolve();
 
 class SvelteScheduler extends Scheduler {
 	constructor(...args) {
